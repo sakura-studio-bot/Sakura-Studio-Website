@@ -1,0 +1,621 @@
+@charset "UTF-8";
+
+/* Paleta Sakura Studio */
+:root {
+    --rosa-sakura: #FADADD;
+    --branco-gelo: #FFFFFF;
+    --lilas-suave: #D6C7F7;
+    --bege-claro: #FFEAD0;
+    --dourado-suave: #EFCB8D;
+    --rosa-escuro: #F4C2C2;
+    --lilas-escuro: #BFA3E0;
+    --cinza-escuro: #212121;
+}
+
+/* Fontes */
+body, p, ul, li, a, input, select, textarea, button {
+    font-family: 'Quicksand', Arial, sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Raleway', 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, var(--rosa-sakura) 60%, var(--bege-claro) 100%);
+    color: var(--cinza-escuro);
+    min-height: 100vh;
+    overflow-x: hidden; /* Adicionado para evitar scroll lateral */
+}
+
+/* Layout principal */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 12px 80px 12px;
+}
+
+section {
+    background: var(--branco-gelo);
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(220, 180, 220, 0.10);
+    margin-bottom: 32px;
+    padding: 32px 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header e Navbar */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--rosa-sakura);
+    color: var(--cinza-escuro);
+    padding: 24px 40px 16px 40px;
+    box-shadow: 0 2px 8px rgba(220, 180, 220, 0.15);
+    gap: 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.logo-text {
+    font-size: 2rem;
+    color: var(--lilas-suave);
+    letter-spacing: 2px;
+}
+
+.logo-image {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--lilas-suave);
+    background: var(--branco-gelo);
+    object-fit: cover;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Adicionado para alinhar verticalmente */
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--cinza-escuro);
+    background: var(--lilas-suave);
+    padding: 8px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 1px 6px rgba(180, 140, 220, 0.08);
+}
+
+.nav-links a:hover {
+    background: var(--dourado-suave);
+    color: var(--rosa-escuro);
+}
+
+/* Banner */
+#banner-loja {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: var(--branco-gelo);
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(220, 180, 220, 0.10);
+    margin-bottom: 32px;
+    padding: 32px 24px;
+}
+
+.banner-texto {
+    flex: 1;
+}
+
+.propaganda {
+    width: 340px;
+    max-width: 40vw;
+    border-radius: 16px;
+    box-shadow: 0 0 24px var(--lilas-suave), 0 0 8px var(--dourado-suave);
+    background: var(--bege-claro);
+    object-fit: contain;
+}
+
+/* Cards de Produtos */
+.produtos-gfx {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    justify-content: flex-start;
+}
+
+.produto-card {
+    background: var(--bege-claro);
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(220,180,220,0.10);
+    padding: 18px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+    position: relative;
+    z-index: 1;
+}
+.produto-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(220,180,220,0.18), 0 0 24px var(--rosa-sakura);
+    background: linear-gradient(135deg, var(--rosa-sakura) 60%, var(--bege-claro) 100%);
+}
+
+.produto-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 8px var(--lilas-suave);
+}
+
+.produto-card h3 {
+    font-size: 1.2rem;
+    color: var(--rosa-escuro);
+    margin-bottom: 6px;
+}
+
+.produto-card p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.preco {
+    font-weight: bold;
+    color: var(--dourado-suave);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.produto-card button {
+    background: var(--rosa-sakura);
+    color: var(--cinza-escuro);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.produto-card button:hover,
+.form-pedido button[type="submit"]:hover {
+    background: var(--dourado-suave);
+    box-shadow: 0 0 12px var(--dourado-suave), 0 0 4px var(--rosa-sakura);
+}
+
+.form-pedido {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin: 24px auto 0 auto;
+    background: var(--bege-claro);
+    padding: 24px 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(220,180,220,0.08);
+}
+
+.form-pedido label {
+    font-weight: 700;
+    color: var(--cinza-escuro);
+}
+
+.form-pedido input,
+.form-pedido select,
+.form-pedido textarea {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--lilas-suave);
+    font-size: 1rem;
+    margin-bottom: 4px;
+    background: var(--branco-gelo);
+    color: var(--cinza-escuro);
+}
+
+.form-pedido select {
+    background: var(--lilas-suave);
+    color: var(--cinza-escuro);
+    border: 1.5px solid var(--rosa-sakura);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 1px 8px rgba(220,180,220,0.08);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+    cursor: pointer;
+}
+
+.form-pedido select:focus {
+    border-color: var(--dourado-suave);
+    box-shadow: 0 0 0 2px var(--dourado-suave);
+    outline: none;
+}
+
+.form-pedido option {
+    background: var(--branco-gelo);
+    color: var(--cinza-escuro);
+    font-weight: 500;
+    padding: 8px;
+}
+
+.form-pedido textarea {
+    resize: none;
+    overflow-y: auto;
+    min-height: 80px;
+    max-height: 200px;
+}
+
+.form-pedido button[type="submit"] {
+    background: linear-gradient(90deg, var(--rosa-sakura) 60%, var(--lilas-suave) 100%);
+    color: var(--cinza-escuro);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 12px rgba(220,180,220,0.10);
+    cursor: pointer;
+    transition: background 0.25s, box-shadow 0.25s, transform 0.18s;
+    margin-top: 8px;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-pedido button[type="submit"]:hover {
+    background: linear-gradient(90deg, var(--dourado-suave) 60%, var(--rosa-sakura) 100%);
+    color: var(--cinza-escuro);
+    box-shadow: 0 0 18px var(--dourado-suave), 0 0 8px var(--rosa-sakura);
+    transform: translateY(-2px) scale(1.04);
+}
+
+.form-pedido button[type="submit"]:active {
+    background: var(--rosa-escuro);
+    color: var(--cinza-escuro);
+    transform: scale(0.98);
+    box-shadow: 0 0 8px var(--rosa-escuro);
+}
+
+/* Carrinho de Compras */
+.carrinho-icone {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 8px 18px;
+    border-radius: 8px;
+    background: var(--lilas-suave);
+    transition: background 0.2s, filter 0.2s;
+    box-shadow: 0 1px 6px rgba(180, 140, 220, 0.08);
+    text-decoration: none;
+    font-weight: 700;
+}
+.carrinho-icone:hover {
+    background: var(--dourado-suave);
+    filter: drop-shadow(0 0 8px var(--lilas-suave));
+}
+.carrinho-svg {
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+.carrinho-contador {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background: var(--dourado-suave);
+    color: var(--cinza-escuro);
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 7px;
+    box-shadow: 0 0 6px var(--rosa-sakura);
+    z-index: 2;
+}
+
+/* Estilo para lista do carrinho */
+#carrinho-lista {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0 0;
+}
+#carrinho-lista li {
+    background: var(--bege-claro);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 6px rgba(220,180,220,0.08);
+    font-size: 1rem;
+}
+.remover-carrinho {
+    background: var(--rosa-sakura);
+    color: var(--cinza-escuro);
+    border: none;
+    border-radius: 6px;
+    padding: 4px 12px;
+    margin-left: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+.remover-carrinho:hover {
+    background: var(--dourado-suave);
+    box-shadow: 0 0 8px var(--dourado-suave), 0 0 2px var(--rosa-sakura);
+}
+
+/* Efeito animado de brilho ao hover para todos botões */
+button,
+.produto-card button,
+.form-pedido button[type="submit"],
+.remover-carrinho {
+    position: relative;
+    overflow: hidden;
+}
+button::after,
+.produto-card button::after,
+.form-pedido button[type="submit"]::after,
+.remover-carrinho::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -40%;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 0%, #fff7 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s, left 0.3s;
+}
+button:hover::after,
+.produto-card button:hover::after,
+.form-pedido button[type="submit"]:hover::after,
+.remover-carrinho:hover::after {
+    left: 100%;
+    opacity: 1;
+    transition: opacity 0.3s, left 0.6s;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: linear-gradient(135deg, var(--rosa-sakura) 60%, var(--bege-claro) 100%);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s;
+}
+
+.preloader-content {
+    text-align: center;
+    animation: preloader-flor-gira 1.2s infinite linear;
+}
+
+.preloader-flor {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 16px;
+    animation: preloader-flor-flutua 1.2s infinite alternate;
+}
+
+@keyframes preloader-flor-flutua {
+    0% { transform: translateY(0) scale(1);}
+    100% { transform: translateY(-18px) scale(1.1);}
+}
+
+@keyframes preloader-flor-gira {
+    0% { filter: hue-rotate(0deg);}
+    100% { filter: hue-rotate(360deg);}
+}
+
+#preloader p {
+    color: var(--rosa-escuro);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 18px 0;
+    background: var(--lilas-suave);
+    color: var(--cinza-escuro);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 8px rgba(220, 180, 220, 0.10);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Efeito de sakuras flutuantes no título ao passar o mouse */
+h2 {
+    position: relative;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+h2:hover {
+    color: var(--rosa-sakura);
+}
+h2:hover::after {
+    content: " 🌸🌸🌸";
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    font-size: 1.5em;
+    animation: sakura-flutua 1.2s ease-in-out;
+}
+
+@keyframes sakura-flutua {
+    0% { opacity: 0; transform: translateY(10px) scale(0.8);}
+    40% { opacity: 1; transform: translateY(-8px) scale(1);}
+    100% { opacity: 0; transform: translateY(-24px) scale(1.2);}
+}
+
+/* Scrollbar customizada Sakura */
+body::-webkit-scrollbar {
+    width: 12px;
+    background: var(--bege-claro);
+    border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--rosa-sakura) 60%, var(--lilas-suave) 100%);
+    border-radius: 8px;
+    box-shadow: 0 0 8px var(--rosa-sakura), 0 0 2px var(--dourado-suave);
+    border: 2px solid var(--bege-claro);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--dourado-suave) 60%, var(--rosa-sakura) 100%);
+    box-shadow: 0 0 12px var(--dourado-suave), 0 0 4px var(--rosa-sakura);
+}
+
+/* Firefox */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--rosa-sakura) var(--bege-claro);
+}
+
+/* Efeito de pétalas de sakura caindo */
+.sakura-petal {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 2rem;
+    pointer-events: none;
+    z-index: 999;
+    animation: sakura-chuva 3.2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    opacity: 0.85;
+}
+
+@keyframes sakura-chuva {
+    0% {
+        opacity: 0.85;
+        transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+        filter: blur(0px);
+    }
+    60% {
+        opacity: 1;
+        filter: blur(0.5px);
+    }
+    90% {
+        opacity: 0.5;
+        transform: translateX(var(--x)) translateY(95vh) scale(1.1) rotate(320deg);
+        filter: blur(1.5px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(var(--x)) translateY(100vh) scale(0.9) rotate(360deg);
+        filter: blur(2px);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    main {
+        padding: 24px 8px 60px 8px;
+    }
+    section {
+        padding: 24px 12px;
+    }
+    #banner-loja, .produtos-gfx {
+        flex-direction: column;
+        align-items: center;
+    }
+    .produtos-gfx {
+        gap: 20px;
+    }
+    .produto-card {
+        width: 90vw;
+        max-width: 320px;
+    }
+    .propaganda {
+        width: 80vw;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 16px 8px;
+        gap: 16px;
+    }
+    .logo-text {
+        font-size: 1.3rem;
+    }
+    .nav-links ul {
+        gap: 12px;
+        flex-direction: column;
+        align-items: center;
+    }
+    #banner-loja {
+        padding: 18px 8px;
+    }
+    section {
+        padding: 16px 8px;
+    }
+    .form-pedido {
+        padding: 16px 8px;
+        max-width: 98vw;
+    }
+    .form-pedido input,
+    .form-pedido select,
+    .form-pedido textarea {
+        font-size: 0.9rem;
+    }
+    .produto-card h3 {
+        font-size: 1.1rem;
+    }
+    .preco {
+        font-size: 1rem;
+    }
+    .nav-links a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+    footer {
+        font-size: 0.9rem;
+    }
+}

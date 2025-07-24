@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸Sakura Studio🌸</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div id="preloader">
+        <div class="preloader-content">
+            <span class="preloader-flor">🌸</span>
+            <p>Carregando Sakura Studio...</p>
+        </div>
+    </div>
+    <header>
+        <nav class="logo">
+            <h1 class="logo-text">🌸 Sakura Studio</h1>
+            <img src="imagens/logo.png" alt="Logo Sakura Studio" class="logo-image">
+        </nav>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#gfx">GFX</a></li>
+                <li><a href="#design">Design</a></li>
+                <li><a href="#pacotes">Pacotes</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li>
+                    <a href="#carrinho" class="carrinho-icone" title="Ver Carrinho">
+                        <span class="carrinho-svg">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </span>
+                        <span id="carrinho-contador" class="carrinho-contador">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="banner-loja">
+            <div class="banner-texto">
+                <h2>Beleza digital que floresce em cada pixel.</h2>
+                <p>Escolha seu GFX, skin ou design e personalize sua experiência Roblox!</p>
+            </div>
+            <img src="imagens/imagem_propaganda_fundo_transparente.png" alt="Avatar GFX Sakura Studio" class="propaganda">
+        </section>
+
+        <section id="gfx">
+            <h2>GFX & Skins</h2>
+            <div class="produtos-gfx">
+                <div class="produto-card">
+                    <img src="imagens/gfx-normal.png" alt="Skin Normal">
+                    <h3>Skin Normal</h3>
+                    <p>Renderização padrão em alta qualidade.</p>
+                    <span class="preco" data-preco="15">R$ 15,00</span>
+                    <button class="add-carrinho" data-produto="Skin Normal" data-preco="15">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-card">
+                    <img src="imagens/gfx-glossy.png" alt="Glossy">
+                    <h3>Glossy</h3>
+                    <p>Skin sem rugosidade, efeito brilhante.</p>
+                    <span class="preco" data-preco="18">R$ 18,00</span>
+                    <button class="add-carrinho" data-produto="Glossy" data-preco="18">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-card">
+                    <img src="imagens/gfx-headless.png" alt="Headless">
+                    <h3>Headless</h3>
+                    <p>Skin sem cabeça, personalizável.</p>
+                    <span class="preco" data-preco="20">R$ 20,00</span>
+                    <button class="add-carrinho" data-produto="Headless" data-preco="20">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-card">
+                    <img src="imagens/gfx-combinada.png" alt="Combinações">
+                    <h3>Combinações</h3>
+                    <p>Monte sua skin com efeitos especiais: Glow, Glitter, Pétalas.</p>
+                    <span class="preco" data-preco="25">R$ 25,00</span>
+                    <button class="add-carrinho" data-produto="Combinações" data-preco="25">Adicionar ao carrinho</button>
+                </div>
+            </div>
+            <div id="combinar-gfx-area" style="display:none; margin-top:24px;">
+                <button id="combinar-gfx-btn" class="combinar-btn">Combinar selecionados (R$ <span id="combinar-preco">25</span>,00)</button>
+                <p class="combinar-info">Você pode combinar apenas dois: Skin Normal + Headless, Skin Normal + Glossy ou Headless + Glossy.</p>
+            </div>
+        </section>
+
+        <section id="design">
+            <h2>Design para Lojinhas</h2>
+            <div class="produtos-gfx">
+                <div class="produto-card">
+                    <img src="imagens/design-pacote.png" alt="Pacote Completo">
+                    <h3>Pacote Completo</h3>
+                    <p>Banner, posts, logo e visual para sua lojinha.</p>
+                    <span class="preco">R$ 35,00</span>
+                    <button class="add-carrinho" data-produto="Pacote Completo">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-card">
+                    <img src="imagens/design-banner.png" alt="Banner">
+                    <h3>Banner</h3>
+                    <p>Banner personalizado para Roblox.</p>
+                    <span class="preco">R$ 12,00</span>
+                    <button class="add-carrinho" data-produto="Banner">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-card">
+                    <img src="imagens/design-post.png" alt="Posts">
+                    <h3>Posts</h3>
+                    <p>Posts para divulgação e feed.</p>
+                    <span class="preco">R$ 10,00</span>
+                    <button class="add-carrinho" data-produto="Posts">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-card">
+                    <img src="imagens/design-logo.png" alt="Logo">
+                    <h3>Logo</h3>
+                    <p>Logo estilizada para sua loja ou grupo.</p>
+                    <span class="preco">R$ 15,00</span>
+                    <button class="add-carrinho" data-produto="Logo">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="pacotes">
+            <h2>Pacotes Sakura</h2>
+            <div class="produtos-gfx">
+                <div class="produto-card">
+                    <img src="imagens/pacote-gfx-design.png" alt="GFX + Design">
+                    <h3>GFX + Design</h3>
+                    <p>Combo especial para lojinha completa.</p>
+                    <span class="preco">R$ 45,00</span>
+                    <button class="add-carrinho" data-produto="GFX + Design">Adicionar ao carrinho</button>
+                </div>
+                <div class="produto-card">
+                    <img src="imagens/pacote-feed.png" alt="Feed Interativo">
+                    <h3>Feed Interativo</h3>
+                    <p>Antes/depois, stories e destaques personalizados.</p>
+                    <span class="preco">R$ 20,00</span>
+                    <button class="add-carrinho" data-produto="Feed Interativo">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato & Pedidos</h2>
+            <p>Fale conosco pelo e-mail <a href="mailto:sakurastudio2307@gmail.com">sakurastudio2307@gmail.com</a> ou envie seu pedido pelo formulário abaixo:</p>
+            <form action="https://formspree.io/f/mdkdejrr" method="POST" class="form-pedido">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="detalhes">Detalhes do pedido:</label>
+                <textarea id="detalhes" name="detalhes" rows="3"></textarea>
+                <input type="hidden" id="produtos-carrinho" name="produtos">
+                <button type="submit">Enviar Pedido</button>
+            </form>
+        </section>
+
+        <section id="carrinho">
+            <h2><span class="carrinho-svg">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </span> Carrinho</h2>
+            <ul id="carrinho-lista"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Sakura Studio. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+const logoNav = document.querySelector('.logo');
+logoNav.addEventListener('mouseenter', () => {
+    for (let i = 0; i < 12; i++) {
+        const petal = document.createElement('span');
+        petal.className = 'sakura-petal';
+        petal.textContent = '🌸';
+        // Gera posição horizontal aleatória na área do logo
+        const xPercent = Math.random() * 100; // de 0% a 100%
+        petal.style.left = `${xPercent}%`;
+        // Gera deslocamento horizontal para animação
+        const xMove = (Math.random() * 400 - 200) + 'px';
+        petal.style.setProperty('--x', xMove);
+        petal.style.fontSize = (1.5 + Math.random()) + 'rem';
+        logoNav.appendChild(petal);
+        setTimeout(() => petal.remove(), 2200);
+    }
+});
+
+const carrinho = [];
+const lista = document.getElementById('carrinho-lista');
+const produtosInput = document.getElementById('produtos-carrinho');
+const contador = document.getElementById('carrinho-contador');
+
+document.querySelectorAll('.add-carrinho').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const produto = btn.getAttribute('data-produto');
+        carrinho.push(produto);
+        atualizarCarrinho();
+
+        // Efeito: voam 3 sakuras ao clicar
+        for (let i = 0; i < 3; i++) {
+            const petal = document.createElement('span');
+            petal.className = 'sakura-petal';
+            petal.textContent = '🌸';
+            // Posição aleatória sobre o botão
+            const xPercent = Math.random() * 100;
+            petal.style.left = `${xPercent}%`;
+            // Direção aleatória para animação
+            const xMove = (Math.random() * 200 - 100) + 'px';
+            petal.style.setProperty('--x', xMove);
+            petal.style.fontSize = (1.2 + Math.random()) + 'rem';
+            btn.parentElement.appendChild(petal);
+            setTimeout(() => petal.remove(), 1800);
+        }
+    });
+});
+
+function atualizarCarrinho() {
+    lista.innerHTML = '';
+    carrinho.forEach((item, i) => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        // Botão para remover item
+        const rem = document.createElement('button');
+        rem.textContent = 'Remover';
+        rem.className = 'remover-carrinho';
+        rem.onclick = () => {
+            carrinho.splice(i, 1);
+            atualizarCarrinho();
+        };
+        li.appendChild(rem);
+        lista.appendChild(li);
+    });
+    produtosInput.value = carrinho.join(', ');
+    contador.textContent = carrinho.length;
+}
+
+window.addEventListener('load', function() {
+    setTimeout(() => {
+        document.getElementById('preloader').style.opacity = '0';
+        setTimeout(() => {
+            document.getElementById('preloader').style.display = 'none';
+        }, 400);
+    }, 3000); // Preloader fica visível por pelo menos 3 segundos
+});
+</script>
+</body>
+</html>
