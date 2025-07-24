@@ -116,6 +116,13 @@ header {
     color: var(--rosa-escuro);
 }
 
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
+
+
 /* Banner */
 #banner-loja {
     display: flex;
